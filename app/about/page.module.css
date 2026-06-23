@@ -1,0 +1,95 @@
+.story { padding: var(--space-3xl) var(--page-pad); }
+.inner { max-width: var(--max-width); margin: 0 auto; }
+.storyGrid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3xl); align-items: center; }
+.storyImageWrap { position: relative; }
+.storyImage { width: 100%; height: auto; border-radius: var(--radius-lg); }
+.storyScript {
+  font-family: var(--font-script);
+  font-size: 32px;
+  color: var(--clay-500);
+  text-align: center;
+  margin-top: var(--space-md);
+}
+.storySerpraf {
+  font-family: var(--font-serif);
+  font-size: clamp(17px, 2vw, 22px);
+  font-style: italic;
+  color: var(--ink-700);
+  line-height: 1.7;
+  margin-bottom: var(--space-xl);
+}
+.storyPara {
+  font-family: var(--font-serif);
+  font-size: 16px;
+  color: var(--ink-700);
+  line-height: 1.8;
+  margin-bottom: var(--space-xl);
+}
+.storyTagline {
+  font-family: var(--font-script);
+  font-size: 28px;
+  color: var(--clay-500);
+}
+
+.values {
+  background: var(--paper-1);
+  padding: var(--space-3xl) var(--page-pad);
+  border-top: 1px solid var(--hairline);
+}
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-xl);
+  margin-bottom: var(--space-2xl);
+}
+.valueItem { display: flex; flex-direction: column; align-items: center; text-align: center; gap: var(--space-md); }
+.valueIcon { color: var(--clay-500); }
+.valueLabel {
+  font-family: var(--font-ui);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-700);
+}
+.valueDesc {
+  font-family: var(--font-serif);
+  font-size: 14px;
+  font-style: italic;
+  color: var(--ink-500);
+}
+.banner {
+  background: var(--olive-500);
+  border-radius: var(--radius-banner);
+  padding: var(--space-xl) var(--space-2xl);
+  text-align: center;
+}
+.bannerText {
+  font-family: var(--font-script);
+  font-size: clamp(24px, 3vw, 36px);
+  color: var(--gold-300);
+}
+
+.contact { padding: var(--space-3xl) var(--page-pad); }
+.contactGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-md);
+  margin-bottom: var(--space-2xl);
+}
+.contactItem { display: flex; align-items: center; gap: var(--space-md); }
+.contactIcon { color: var(--gold-500); flex-shrink: 0; }
+.contactLabel {
+  font-family: var(--font-serif);
+  font-size: 16px;
+  color: var(--ink-700);
+  text-decoration: none;
+}
+a.contactLabel:hover { color: var(--clay-500); text-decoration: underline; text-underline-offset: 3px; }
+.contactCta { display: flex; justify-content: center; }
+
+@media (max-width: 768px) {
+  .storyGrid { grid-template-columns: 1fr; }
+  .valuesGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .contactGrid { grid-template-columns: 1fr; }
+}

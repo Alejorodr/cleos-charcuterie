@@ -1,0 +1,88 @@
+.section { padding: var(--space-3xl) var(--page-pad); }
+.inner { max-width: var(--max-width); margin: 0 auto; }
+.tiersGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-xl);
+  margin-bottom: var(--space-xl);
+}
+.tierWrap { position: relative; }
+.badgeWrap { position: absolute; top: var(--space-md); right: var(--space-md); z-index: 1; }
+.tierInner { text-align: center; }
+.tierName {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--clay-500);
+  margin-bottom: var(--space-sm);
+}
+.tierPeople {
+  font-family: var(--font-ui);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-300);
+  margin-bottom: var(--space-xl);
+}
+.tierPp {
+  font-family: var(--font-ui);
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--ink-900);
+  line-height: 1;
+  margin-bottom: var(--space-sm);
+}
+.pp { font-size: 18px; font-weight: 400; color: var(--ink-500); }
+.tierTotal {
+  font-family: var(--font-serif);
+  font-size: 15px;
+  font-style: italic;
+  color: var(--ink-500);
+}
+.note {
+  font-family: var(--font-serif);
+  font-size: 15px;
+  font-style: italic;
+  color: var(--ink-500);
+  text-align: center;
+}
+.includesSection {
+  background: var(--paper-1);
+  padding: var(--space-3xl) var(--page-pad);
+  border-top: 1px solid var(--hairline);
+}
+.includesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-2xl);
+}
+.includeItem { display: flex; flex-direction: column; align-items: center; text-align: center; gap: var(--space-md); }
+.includeIcon { color: var(--clay-500); }
+.includeTitle {
+  font-family: var(--font-serif);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--ink-900);
+}
+.includeDesc {
+  font-family: var(--font-serif);
+  font-size: 14px;
+  font-style: italic;
+  color: var(--ink-500);
+}
+.ctaBand {
+  padding: var(--space-2xl) var(--page-pad);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xl);
+  border-top: 1px solid var(--hairline);
+}
+.ctaText { font-family: var(--font-serif); font-size: 24px; font-style: italic; color: var(--ink-700); }
+@media (max-width: 768px) {
+  .tiersGrid { grid-template-columns: 1fr; }
+  .includesGrid { grid-template-columns: 1fr; }
+}
