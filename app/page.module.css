@@ -17,6 +17,7 @@
   height: auto;
   border-radius: 20px;
   display: block;
+  mix-blend-mode: multiply;
 }
 .heroRight {
   display: flex;
