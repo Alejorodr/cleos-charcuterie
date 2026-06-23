@@ -41,7 +41,7 @@
   transition: color var(--dur-fast) var(--ease-soft);
 }
 .contact:hover { color: var(--gold-300); }
-.icon { color: var(--gold-400); flex-shrink: 0; }
+.icon { color: var(--gold-400); flex-shrink: 0; display: flex; align-items: center; }
 
 .bottom {
   border-top: 1px solid oklch(60% 0.06 115);
