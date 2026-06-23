@@ -35,25 +35,29 @@ export default function HomePage() {
   return (
     <>
       <section className={styles.hero}>
-        <Image
-          src="/logo.jpg"
-          alt="Cleo's Charcuterie & Oysters Co. — official logo"
-          width={600}
-          height={600}
-          className={styles.heroLogo}
-          priority
-        />
-        <Divider />
-        <div className={styles.heroText}>
-          <div className={styles.wordmarkHero}>
-            <span className={styles.heroName}>CLEO&apos;S</span>
-            <span className={styles.heroSub}>CHARCUTERIE &amp; OYSTERS CO.</span>
+        <div className={styles.heroInner}>
+          <div className={styles.heroLeft}>
+            <Image
+              src="/logo.jpg"
+              alt="Cleo's Charcuterie & Oysters Co. — official logo"
+              width={600}
+              height={600}
+              className={styles.heroLogo}
+              priority
+            />
           </div>
-          <p className={styles.heroTagline}>Simple. Beautiful. Made to Share. &#9825;</p>
-        </div>
-        <div className={styles.heroCtas}>
-          <Button variant="olive" size="lg" href="/order">Order a Board</Button>
-          <Button variant="outline" size="lg" href="/boards">View the Menu</Button>
+          <div className={styles.heroRight}>
+            <div className={styles.wordmarkHero}>
+              <span className={styles.heroName}>CLEO&apos;S</span>
+              <span className={styles.heroSub}>CHARCUTERIE &amp; OYSTERS CO.</span>
+            </div>
+            <Divider />
+            <p className={styles.heroTagline}>Simple. Beautiful. Made to Share. &#9825;</p>
+            <div className={styles.heroCtas}>
+              <Button variant="olive" size="lg" href="/order">Order a Board</Button>
+              <Button variant="outline" size="lg" href="/boards">View the Menu</Button>
+            </div>
+          </div>
         </div>
       </section>
 
