@@ -1,0 +1,164 @@
+.builder {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: var(--space-3xl);
+  align-items: start;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-3xl) var(--page-pad);
+}
+
+.step { margin-bottom: var(--space-2xl); }
+.stepLabel {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--clay-500);
+  margin-bottom: var(--space-lg);
+}
+.stepNum {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1.5px solid var(--gold-500);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.boardList { display: flex; flex-direction: column; gap: var(--space-sm); }
+.boardOption {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md) var(--space-lg);
+  border: 1.5px solid var(--hairline);
+  border-radius: var(--radius-md);
+  background: var(--paper-1);
+  cursor: pointer;
+  transition: border-color var(--dur-fast) var(--ease-soft),
+              background var(--dur-fast) var(--ease-soft);
+  text-align: left;
+  width: 100%;
+}
+.boardOption:hover { border-color: var(--clay-500); }
+.selected { border-color: var(--clay-500); background: oklch(50% 0.11 38 / 0.04); }
+.boardCheck {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 1.5px solid var(--clay-500);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--clay-500);
+}
+.selected .boardCheck { background: var(--clay-500); color: white; }
+.boardInfo { flex: 1; display: flex; flex-direction: column; gap: 2px; }
+.boardOptionName {
+  font-family: var(--font-serif);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--ink-900);
+}
+.boardOptionPeople {
+  font-family: var(--font-ui);
+  font-size: 11px;
+  color: var(--ink-300);
+  letter-spacing: 0.10em;
+}
+
+.addonList { display: flex; flex-wrap: wrap; gap: var(--space-sm); }
+.addonChip {
+  font-family: var(--font-ui);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  padding: var(--space-sm) var(--space-md);
+  border: 1.5px solid var(--hairline);
+  border-radius: 999px;
+  background: var(--paper-1);
+  cursor: pointer;
+  color: var(--ink-700);
+  transition: all var(--dur-fast) var(--ease-soft);
+}
+.addonChip:hover { border-color: var(--olive-500); }
+.addonOn { background: var(--olive-500); border-color: var(--olive-500); color: var(--text-on-dark); }
+
+.right {}
+.stickyCard { position: sticky; top: 120px; }
+.summaryTitle {
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--clay-500);
+  margin-bottom: var(--space-lg);
+}
+.summaryBoard, .summaryAddon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-sm);
+}
+.summaryAddons { margin-top: var(--space-sm); }
+.summaryItem {
+  font-family: var(--font-serif);
+  font-size: 15px;
+  color: var(--ink-700);
+}
+.summaryPrice {
+  font-family: var(--font-ui);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink-900);
+}
+.summaryTotal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-xl);
+}
+.totalLabel {
+  font-family: var(--font-ui);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--ink-300);
+}
+.totalAmount {
+  font-family: var(--font-ui);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--clay-500);
+}
+
+.thankYou {
+  font-family: var(--font-script);
+  font-size: 40px;
+  color: var(--clay-500);
+  text-align: center;
+  margin-bottom: var(--space-md);
+}
+.thankYouSub {
+  font-family: var(--font-serif);
+  font-size: 15px;
+  font-style: italic;
+  color: var(--ink-500);
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
+@media (max-width: 768px) {
+  .builder { grid-template-columns: 1fr; }
+  .stickyCard { position: static; }
+}
