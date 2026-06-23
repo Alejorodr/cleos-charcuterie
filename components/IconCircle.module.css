@@ -1,0 +1,9 @@
+.circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1.5px solid var(--gold-500);
+  background: var(--paper-1);
+  flex-shrink: 0;
+}

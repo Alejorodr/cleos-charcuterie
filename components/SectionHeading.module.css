@@ -1,0 +1,25 @@
+.heading { margin-bottom: var(--space-2xl); }
+.left { text-align: left; }
+.center { text-align: center; }
+
+.kicker {
+  font-family: var(--font-script);
+  font-size: 28px;
+  color: var(--clay-500);
+  margin-bottom: var(--space-sm);
+}
+.title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(20px, 3vw, 36px);
+  color: var(--clay-500);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.rule {
+  width: 48px;
+  height: 1.5px;
+  background: var(--gold-500);
+  margin-top: var(--space-md);
+}
+.center .rule { margin-left: auto; margin-right: auto; }
