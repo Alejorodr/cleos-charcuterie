@@ -1,0 +1,8 @@
+.card {
+  background: var(--paper-1);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--hairline);
+  padding: var(--space-xl);
+}
+.framed { border: 1.5px solid var(--gold-500); }
