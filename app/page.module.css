@@ -7,9 +7,8 @@
   text-align: center;
 }
 .heroLogo {
-  position: relative;
-  width: min(88%, 480px);
-  aspect-ratio: 4/3;
+  width: min(88%, 400px);
+  height: auto;
   margin-bottom: var(--space-xl);
 }
 .heroText { margin-bottom: var(--space-xl); }

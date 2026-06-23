@@ -35,16 +35,14 @@ export default function HomePage() {
   return (
     <>
       <section className={styles.hero}>
-        <div className={styles.heroLogo}>
-          <Image
-            src="/logo.jpg"
-            alt="Cleo's Charcuterie & Oysters Co. — official logo"
-            fill
-            style={{ objectFit: 'contain' }}
-            sizes="(max-width: 768px) 88vw, 480px"
-            priority
-          />
-        </div>
+        <Image
+          src="/logo.jpg"
+          alt="Cleo's Charcuterie & Oysters Co. — official logo"
+          width={600}
+          height={600}
+          className={styles.heroLogo}
+          priority
+        />
         <Divider />
         <div className={styles.heroText}>
           <div className={styles.wordmarkHero}>
