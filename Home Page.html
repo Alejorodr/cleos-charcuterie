@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cleo's Charcuterie & Oysters Co.</title>
+<link rel="stylesheet" href="_ds/cleo-s-design-system-33cea7ef-9a0d-4389-a53e-1b83921b81d5/styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+<script src="_ds/cleo-s-design-system-33cea7ef-9a0d-4389-a53e-1b83921b81d5/_ds_bundle.js"></script>
+<style>
+  body { margin: 0; background: var(--bg-page); }
+</style>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="text/babel" src="home/parts.jsx"></script>
+  <script type="text/babel" src="home/sections.jsx"></script>
+  <script type="text/babel">
+    function App() {
+      const goOrder = () => { window.location.href = 'Order.html'; };
+      const goBoards = () => { window.location.href = 'Boards.html'; };
+      React.useEffect(() => { window.lucide && window.lucide.createIcons(); });
+      return (
+        <React.Fragment>
+          <window.CleoHeader active="home" />
+          <window.CleoHero onOrder={goOrder} onMenu={goBoards} />
+          <window.CleoFeatures />
+          <window.CleoBoards onOrder={goOrder} />
+          <window.CleoSeafood />
+          <window.CleoValues />
+          <window.CleoFooter />
+        </React.Fragment>
+      );
+    }
+
+    function mount() {
+      if (!window.CleoHeader || !window.CleoHero || !window.CleoSDesignSystem_33cea7) { setTimeout(mount, 40); return; }
+      ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+    }
+    mount();
+  </script>
+</body>
+</html>

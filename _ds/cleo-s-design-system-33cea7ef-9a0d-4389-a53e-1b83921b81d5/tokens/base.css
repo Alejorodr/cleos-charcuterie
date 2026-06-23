@@ -1,0 +1,94 @@
+/* ============================================================
+   Cleo's — Base element styles & a few brand utilities.
+   Light-touch resets only; tokens do the heavy lifting.
+   ============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  color: var(--text-body);
+  background: var(--bg-page);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ---- Headings ---- */
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  color: var(--text-strong);
+  font-weight: var(--fw-500, 500);
+  line-height: var(--leading-tight);
+  margin: 0 0 var(--space-4);
+}
+
+a { color: var(--brand-primary); text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+::selection { background: var(--gold-300); color: var(--ink-900); }
+
+/* ============================================================
+   Brand utilities — small, reusable decorative primitives.
+   ============================================================ */
+
+/* The CLEO'S wordmark treatment */
+.cleos-wordmark {
+  font-family: var(--font-display);
+  letter-spacing: var(--tracking-widest);
+  color: var(--brand-primary);
+  font-weight: var(--fw-semibold);
+  text-transform: uppercase;
+}
+
+/* Wide-tracked caps label, e.g. "CHARCUTERIE BOARDS" */
+.cleos-label {
+  font-family: var(--font-sans);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wider);
+  font-weight: var(--fw-semibold);
+  font-size: var(--text-xs);
+  color: var(--text-strong);
+}
+
+/* Signature script line, e.g. "Simple. Beautiful. Made to Share." */
+.cleos-script {
+  font-family: var(--font-script);
+  color: var(--ink-700);
+  font-weight: var(--fw-regular);
+  line-height: 1.2;
+}
+
+/* Gold hairline divider with a centered heart — the brand's signature separator */
+.cleos-rule {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  color: var(--gold-500);
+}
+.cleos-rule::before,
+.cleos-rule::after {
+  content: "";
+  height: 1px;
+  flex: 1;
+  background: var(--wash-gold-rule);
+}
+
+/* The little gold heart used throughout the brand (♡) */
+.cleos-heart { color: var(--accent-heart); font-style: normal; }
+
+/* Olive paint-stroke banner */
+.cleos-banner {
+  background: var(--banner-olive);
+  color: var(--text-on-dark);
+  font-family: var(--font-script);
+  font-size: var(--text-lg);
+  padding: var(--space-3) var(--space-6);
+  border-radius: 40px 36px 38px 34px / 30px 34px 30px 36px;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}

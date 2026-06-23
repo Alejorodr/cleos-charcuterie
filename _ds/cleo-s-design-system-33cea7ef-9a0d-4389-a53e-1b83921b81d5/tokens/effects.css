@@ -1,0 +1,36 @@
+/* ============================================================
+   Cleo's — Effects: shadows, gradients, decorative tokens
+   The brand is print-soft: subtle, warm shadows; thin gold rules;
+   the olive paint-stroke banner; gold hairline frames.
+   ============================================================ */
+:root {
+  /* ---- Shadows (warm-tinted, soft, never harsh black) ---- */
+  --shadow-xs:  0 1px 2px rgba(74, 66, 57, 0.06);
+  --shadow-sm:  0 2px 8px rgba(74, 66, 57, 0.08);
+  --shadow-md:  0 6px 20px rgba(74, 66, 57, 0.10);
+  --shadow-lg:  0 14px 40px rgba(74, 66, 57, 0.14);
+  --shadow-photo: 0 10px 30px rgba(44, 42, 38, 0.18);
+
+  /* ---- Inset / pressed ---- */
+  --shadow-inset: inset 0 1px 3px rgba(74, 66, 57, 0.12);
+
+  /* ---- Gold hairline frame (the logo's signature double rule) ---- */
+  --frame-gold: 1.5px solid var(--gold-400);
+
+  /* ---- Decorative gradients (used sparingly — paper warmth, not flashy) ---- */
+  --wash-paper: linear-gradient(180deg, #FBF6EC 0%, #F6F0E5 100%); /* @kind other */
+  --wash-gold-rule: linear-gradient(90deg, transparent, var(--gold-400) 18%, var(--gold-400) 82%, transparent); /* @kind other */
+
+  /* ---- Olive paint-stroke banner background (brushy, hand-painted feel) ---- */
+  --banner-olive: var(--olive-500); /* @kind color */
+
+  /* ---- Motion ---- */
+  --ease-soft: cubic-bezier(0.22, 0.61, 0.36, 1); /* @kind other */
+  --ease-out:  cubic-bezier(0.16, 1, 0.3, 1); /* @kind other */
+  --dur-fast:  140ms; /* @kind other */
+  --dur-base:  240ms; /* @kind other */
+  --dur-slow:  420ms; /* @kind other */
+
+  /* ---- Focus ---- */
+  --ring: 0 0 0 3px rgba(197, 148, 47, 0.35); /* @kind shadow */
+}
