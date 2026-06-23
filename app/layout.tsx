@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import { Cinzel, Cormorant_Garamond, Great_Vibes, Montserrat } from 'next/font/google';
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
 import './globals.css';
 
 const cinzel = Cinzel({
@@ -40,7 +42,11 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${cinzel.variable} ${cormorant.variable} ${greatVibes.variable} ${montserrat.variable}`}>
-      <body>{children}</body>
+      <body>
+        <Header />
+        <main>{children}</main>
+        <Footer />
+      </body>
     </html>
   );
 }
